@@ -1,0 +1,15 @@
+E:\source\repos\Kata\Kata.ConflictingObjectives\bin\Debug\net6.0\Kata.ConflictingObjectives.deps.json
+E:\source\repos\Kata\Kata.ConflictingObjectives\bin\Debug\net6.0\Kata.ConflictingObjectives.dll
+E:\source\repos\Kata\Kata.ConflictingObjectives\bin\Debug\net6.0\ref\Kata.ConflictingObjectives.dll
+E:\source\repos\Kata\Kata.ConflictingObjectives\bin\Debug\net6.0\Kata.ConflictingObjectives.pdb
+E:\source\repos\Kata\Kata.ConflictingObjectives\obj\Debug\net6.0\Kata.ConflictingObjectives.csproj.AssemblyReference.cache
+E:\source\repos\Kata\Kata.ConflictingObjectives\obj\Debug\net6.0\Kata.ConflictingObjectives.GeneratedMSBuildEditorConfig.editorconfig
+E:\source\repos\Kata\Kata.ConflictingObjectives\obj\Debug\net6.0\Kata.ConflictingObjectives.AssemblyInfoInputs.cache
+E:\source\repos\Kata\Kata.ConflictingObjectives\obj\Debug\net6.0\Kata.ConflictingObjectives.AssemblyInfo.cs
+E:\source\repos\Kata\Kata.ConflictingObjectives\obj\Debug\net6.0\Kata.ConflictingObjectives.csproj.CoreCompileInputs.cache
+E:\source\repos\Kata\Kata.ConflictingObjectives\obj\Debug\net6.0\Kata.ConflictingObjectives.dll
+E:\source\repos\Kata\Kata.ConflictingObjectives\obj\Debug\net6.0\ref\Kata.ConflictingObjectives.dll
+E:\source\repos\Kata\Kata.ConflictingObjectives\obj\Debug\net6.0\Kata.ConflictingObjectives.pdb
+E:\source\repos\Kata\Kata.ConflictingObjectives\bin\Debug\net6.0\Kata.ConflictingObjectives.exe
+E:\source\repos\Kata\Kata.ConflictingObjectives\bin\Debug\net6.0\Kata.ConflictingObjectives.runtimeconfig.json
+E:\source\repos\Kata\Kata.ConflictingObjectives\obj\Debug\net6.0\Kata.ConflictingObjectives.genruntimeconfig.cache

@@ -1,0 +1,22 @@
+﻿<wpf:ResourceDictionary xml:space="preserve" xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml" xmlns:s="clr-namespace:System;assembly=mscorlib" xmlns:ss="urn:shemas-jetbrains-com:settings-storage-xaml" xmlns:wpf="http://schemas.microsoft.com/winfx/2006/xaml/presentation">
+	<s:String x:Key="/Default/Environment/UnitTesting/UnitTestSessionStore/Sessions/=599b9113_002D4f64_002D4860_002D990d_002D2eb1add80388/@EntryIndexedValue">&lt;SessionState ContinuousTestingMode="0" IsActive="True" Name="PlayerPay" xmlns="urn:schemas-jetbrains-com:jetbrains-ut-session"&gt;&#xD;
+  &lt;Or&gt;&#xD;
+    &lt;ProjectFile&gt;83CACF0B-F0F5-4638-8BDB-37E01A560A54/f:UnitTest1.cs&lt;/ProjectFile&gt;&#xD;
+    &lt;TestAncestor&gt;&#xD;
+      &lt;TestId&gt;NUnit3x::CA6FB1C6-5888-4521-BE65-272C8C8E9DAE::net6.0::Kata.BusinessRules.Tests.Tests.PaymentIsNotForPhysicalProduct_IsNotPackagedForShipping&lt;/TestId&gt;&#xD;
+      &lt;TestId&gt;NUnit3x::CA6FB1C6-5888-4521-BE65-272C8C8E9DAE::net6.0::Kata.BusinessRules.Tests.Tests.PaymentIsForPhysicalProduct_IsPackagedForShipping&lt;/TestId&gt;&#xD;
+      &lt;TestId&gt;NUnit3x::CA6FB1C6-5888-4521-BE65-272C8C8E9DAE::net6.0::Kata.BusinessRules.Tests.Tests.PaymentIsNotForBook_DontCreatePackingSlipForRoyaltyDepartment&lt;/TestId&gt;&#xD;
+      &lt;TestId&gt;NUnit3x::CA6FB1C6-5888-4521-BE65-272C8C8E9DAE::net6.0::Kata.BusinessRules.Tests.Tests.PaymentForBook_CreatePackingSlipForRoyaltyDepartment&lt;/TestId&gt;&#xD;
+      &lt;TestId&gt;NUnit3x::CA6FB1C6-5888-4521-BE65-272C8C8E9DAE::net6.0::Kata.BusinessRules.Tests.Tests.PaymentNotLearningToSki_DontSendFirstAidToo&lt;/TestId&gt;&#xD;
+      &lt;TestId&gt;NUnit3x::C8E3B3A7-078C-413F-BA0B-2B3386F27B02::net6.0::Kata.MoreBusinessRules.Tests.Tests.CreditCardOrder_ProcessIsCorrect&lt;/TestId&gt;&#xD;
+      &lt;TestId&gt;NUnit3x::C8E3B3A7-078C-413F-BA0B-2B3386F27B02::net6.0::Kata.MoreBusinessRules.Tests.Tests.OrderWithPaymentMethod_OrderOfBusinessIsCorrect&lt;/TestId&gt;&#xD;
+      &lt;TestId&gt;NUnit3x::C8E3B3A7-078C-413F-BA0B-2B3386F27B02::net6.0::Kata.MoreBusinessRules.Tests.Tests.OrderAwaitingPayment_CustomerSendsCheck_OrderProceeds&lt;/TestId&gt;&#xD;
+      &lt;TestId&gt;NUnit3x::C8E3B3A7-078C-413F-BA0B-2B3386F27B02::net6.0::Kata.MoreBusinessRules.Tests.Tests.OrderUnderway_CustomerCancelsOrder_OrderIsDeleted&lt;/TestId&gt;&#xD;
+      &lt;TestId&gt;NUnit3x::77666CAB-30CD-4627-81E1-D827E4611075::net6.0::Kata.Anagrams.Tests.Tests.GroupsAnagrams&lt;/TestId&gt;&#xD;
+      &lt;TestId&gt;NUnit3x::4F86F7F8-9696-4528-B288-1260FC5F0390::net6.0::Kata.ConflictingObjectives.Tests.Tests.Readable&lt;/TestId&gt;&#xD;
+      &lt;TestId&gt;NUnit3x::4F86F7F8-9696-4528-B288-1260FC5F0390::net6.0::Kata.ConflictingObjectives.Tests.Tests.Fast&lt;/TestId&gt;&#xD;
+    &lt;/TestAncestor&gt;&#xD;
+    &lt;Project Location="C:\Users\bjorn\source\repos\Kata\Kata.BusinessRules.Tests" Presentation="&amp;lt;Kata.BusinessRules.Tests&amp;gt;" /&gt;&#xD;
+    &lt;Project Location="E:\source\repos\Kata\Kata.ConflictingObjectives.Tests" Presentation="&amp;lt;Kata.ConflictingObjectives.Tests&amp;gt;" /&gt;&#xD;
+  &lt;/Or&gt;&#xD;
+&lt;/SessionState&gt;</s:String></wpf:ResourceDictionary>
