@@ -1,4 +1,5 @@
-﻿using Kata.BloomFilter;
+﻿using System.IO;
+using Kata.BloomFilter;
 
 const string wordListPath = @"..\..\..\..\wordlist.txt";
 

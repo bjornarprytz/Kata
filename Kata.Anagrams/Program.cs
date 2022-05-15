@@ -1,6 +1,8 @@
 ﻿// See https://aka.ms/new-console-template for more information
 
+using System;
 using System.Diagnostics;
+using System.IO;
 using Kata.Anagrams;
 
 const string wordListPath = @"..\..\..\..\wordlist.txt";

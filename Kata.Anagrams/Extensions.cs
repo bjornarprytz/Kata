@@ -1,4 +1,7 @@
-﻿namespace Kata.Anagrams;
+﻿using System.Collections.Generic;
+using System.Linq;
+
+namespace Kata.Anagrams;
 
 public static class Extensions
 {

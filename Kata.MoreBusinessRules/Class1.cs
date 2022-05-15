@@ -1,4 +1,8 @@
-﻿namespace Kata.MoreBusinessRules;
+﻿using System;
+using System.Collections.Generic;
+using System.Linq;
+
+namespace Kata.MoreBusinessRules;
 
 // http://codekata.com/kata/kata17-more-business-rules/
 

@@ -1,4 +1,6 @@
-﻿namespace Kata.SuperMarketPricing;
+﻿using System.Collections.Generic;
+
+namespace Kata.SuperMarketPricing;
 
 public record Product(string Name, Price Price);
 public record Price(decimal Cost);
