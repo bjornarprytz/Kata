@@ -12,14 +12,12 @@
           "Kata.ConflictingObjectives": "1.0.0",
           "Microsoft.NET.Test.Sdk": "16.11.0",
           "NUnit": "3.13.2",
-          "NUnit3TestAdapter": "4.0.0",
-          "coverlet.collector": "3.1.0"
+          "NUnit3TestAdapter": "4.0.0"
         },
         "runtime": {
           "Kata.ConflictingObjectives.Tests.dll": {}
         }
       },
-      "coverlet.collector/3.1.0": {},
       "FluentAssertions/6.6.0": {
         "dependencies": {
           "System.Configuration.ConfigurationManager": "4.4.0"
@@ -702,13 +700,6 @@
       "type": "project",
       "serviceable": false,
       "sha512": ""
-    },
-    "coverlet.collector/3.1.0": {
-      "type": "package",
-      "serviceable": true,
-      "sha512": "sha512-YzYqSRrjoP5lULBhTDcTOjuM4IDPPi6PhFsl4w8EI4WdZhE6llt7E38Tg4CHyrS+QKwyu1+9OwkdDgluOdoBTw==",
-      "path": "coverlet.collector/3.1.0",
-      "hashPath": "coverlet.collector.3.1.0.nupkg.sha512"
     },
     "FluentAssertions/6.6.0": {
       "type": "package",

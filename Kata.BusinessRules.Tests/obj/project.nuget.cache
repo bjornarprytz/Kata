@@ -1,11 +1,10 @@
 {
   "version": 2,
-  "dgSpecHash": "NXhQfkzXb8+SPIf9enWIlTCA6CY6nxvHMt8RMdRjSBW/LY5iyciEAFsOvcG9nvY3PK4AeYBB5oDtxtPP18GgJA==",
+  "dgSpecHash": "dmq7D4i/vbpl0D9RGeecgz92P8+aFmCBc4Ugoa/Z50sBvZnv9EqJ2RGoy9Cj3KJumD9Y89Lf9Zxq2lLPgfwrUQ==",
   "success": true,
   "projectFilePath": "E:\\source\\repos\\Kata\\Kata.BusinessRules.Tests\\Kata.BusinessRules.Tests.csproj",
   "expectedPackageFiles": [
     "C:\\Users\\bjorn\\.nuget\\packages\\castle.core\\4.4.1\\castle.core.4.4.1.nupkg.sha512",
-    "C:\\Users\\bjorn\\.nuget\\packages\\coverlet.collector\\3.1.0\\coverlet.collector.3.1.0.nupkg.sha512",
     "C:\\Users\\bjorn\\.nuget\\packages\\fluentassertions\\6.6.0\\fluentassertions.6.6.0.nupkg.sha512",
     "C:\\Users\\bjorn\\.nuget\\packages\\mediatr\\10.0.1\\mediatr.10.0.1.nupkg.sha512",
     "C:\\Users\\bjorn\\.nuget\\packages\\mediatr.contracts\\1.0.1\\mediatr.contracts.1.0.1.nupkg.sha512",

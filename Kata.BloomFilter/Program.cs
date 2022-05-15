@@ -1,6 +1,6 @@
 ﻿using Kata.BloomFilter;
 
-const string wordListPath = @"E:\source\repos\Kata\wordlist.txt";
+const string wordListPath = @"..\..\..\..\wordlist.txt";
 
 var filter = new BloomFilter(70000000, 10, Hash.Sha);
 

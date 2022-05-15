@@ -1,10 +1,9 @@
 {
   "version": 2,
-  "dgSpecHash": "yw/ntFt8yOc5MTB0MNANyeyqBqYQfsqVWm+7nznYH9Uq8/E+Zw3X4v6perapgDXlpK1juvgZW7/0gP+ackea2g==",
+  "dgSpecHash": "Kencr8FlMo985ZBFggzNaJSnDLVE72bd5OsJLKMTJ0nDMUM0Xoc7toSITWXx3KIf77g4+IAUVLUYUVHyOujPLw==",
   "success": true,
   "projectFilePath": "E:\\source\\repos\\Kata\\Kata.ConflictingObjectives.Tests\\Kata.ConflictingObjectives.Tests.csproj",
   "expectedPackageFiles": [
-    "C:\\Users\\bjorn\\.nuget\\packages\\coverlet.collector\\3.1.0\\coverlet.collector.3.1.0.nupkg.sha512",
     "C:\\Users\\bjorn\\.nuget\\packages\\fluentassertions\\6.6.0\\fluentassertions.6.6.0.nupkg.sha512",
     "C:\\Users\\bjorn\\.nuget\\packages\\microsoft.codecoverage\\16.11.0\\microsoft.codecoverage.16.11.0.nupkg.sha512",
     "C:\\Users\\bjorn\\.nuget\\packages\\microsoft.csharp\\4.0.1\\microsoft.csharp.4.0.1.nupkg.sha512",

@@ -6,7 +6,7 @@ using System.Diagnostics;
 using System.IO;
 using System.Net;
 using Kata.ConflictingObjectives;
-const string wordListPath = @"E:\source\repos\Kata\wordlist.txt";
+const string wordListPath = @"..\..\..\..\wordlist.txt";
 var words = File.ReadAllText(wordListPath);
 
 

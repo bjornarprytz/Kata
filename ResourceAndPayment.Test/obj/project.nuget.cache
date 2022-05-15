@@ -1,10 +1,9 @@
 {
   "version": 2,
-  "dgSpecHash": "+wA1TsZe8jMK08vUJ5RjgrX2wIVAxPLg29uxshG55su6VoG0442DTd94K3MLU4hyXKifW95jaj3T+ERufCVPxA==",
+  "dgSpecHash": "uGk/CO2/I+1WYyInALDGgJ4lzFAS0TqJwRYbfX4c89PMT3NCXNbSJK+A6ixnPh+vE3RmDJlZixArW0kTzym6Ag==",
   "success": true,
   "projectFilePath": "E:\\source\\repos\\Kata\\ResourceAndPayment.Test\\ResourceAndPayment.Test.csproj",
   "expectedPackageFiles": [
-    "C:\\Users\\bjorn\\.nuget\\packages\\coverlet.collector\\3.1.0\\coverlet.collector.3.1.0.nupkg.sha512",
     "C:\\Users\\bjorn\\.nuget\\packages\\fluentassertions\\6.6.0\\fluentassertions.6.6.0.nupkg.sha512",
     "C:\\Users\\bjorn\\.nuget\\packages\\microsoft.codecoverage\\16.11.0\\microsoft.codecoverage.16.11.0.nupkg.sha512",
     "C:\\Users\\bjorn\\.nuget\\packages\\microsoft.csharp\\4.0.1\\microsoft.csharp.4.0.1.nupkg.sha512",

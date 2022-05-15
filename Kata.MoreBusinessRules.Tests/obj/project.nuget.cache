@@ -1,10 +1,9 @@
 {
   "version": 2,
-  "dgSpecHash": "uwSKQjhORnN8a/mw3lL6EgVXHBgQ7DSdgSZe54bV/NRRHHKAgHnvPZ7oKoYL0qmuMN5nT/5Z4Vm/aCPr3Ag07g==",
+  "dgSpecHash": "hQQuuETDvF62CdaHa32rIo4dkd2b8Ji73hZTGicp+hMmuw9sJLJHOmMYb2gGshvWtARnvLL1z6bgQpT5TewlIg==",
   "success": true,
   "projectFilePath": "E:\\source\\repos\\Kata\\Kata.MoreBusinessRules.Tests\\Kata.MoreBusinessRules.Tests.csproj",
   "expectedPackageFiles": [
-    "C:\\Users\\bjorn\\.nuget\\packages\\coverlet.collector\\3.1.0\\coverlet.collector.3.1.0.nupkg.sha512",
     "C:\\Users\\bjorn\\.nuget\\packages\\fluentassertions\\6.6.0\\fluentassertions.6.6.0.nupkg.sha512",
     "C:\\Users\\bjorn\\.nuget\\packages\\microsoft.codecoverage\\16.11.0\\microsoft.codecoverage.16.11.0.nupkg.sha512",
     "C:\\Users\\bjorn\\.nuget\\packages\\microsoft.csharp\\4.0.1\\microsoft.csharp.4.0.1.nupkg.sha512",

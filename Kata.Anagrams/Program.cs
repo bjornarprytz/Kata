@@ -3,7 +3,9 @@
 using System.Diagnostics;
 using Kata.Anagrams;
 
-const string wordListPath = @"E:\source\repos\Kata\wordlist.txt";
+const string wordListPath = @"..\..\..\..\wordlist.txt";
+
+var currentWorkingDir = Directory.GetCurrentDirectory();
 
 var grouper = new AnagramsGrouper(File.ReadAllText(wordListPath));
 var stopWatch = new Stopwatch();
