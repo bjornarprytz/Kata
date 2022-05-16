@@ -24,6 +24,10 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Kata.ConflictingObjectives"
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Kata.ConflictingObjectives.Tests", "Kata.ConflictingObjectives.Tests\Kata.ConflictingObjectives.Tests.csproj", "{4F86F7F8-9696-4528-B288-1260FC5F0390}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Kata.BackToTheCheckout.Tests", "Kata.BackToTheCheckout.Tests\Kata.BackToTheCheckout.Tests.csproj", "{EA622E1F-7B9A-481D-93C4-1C9A626FDE17}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Kata.BackToTheCheckout", "Kata.BackToTheCheckout\Kata.BackToTheCheckout.csproj", "{C9460714-E572-4FD4-9EA8-4AEBD9E74D5E}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -78,5 +82,13 @@ Global
 		{4F86F7F8-9696-4528-B288-1260FC5F0390}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{4F86F7F8-9696-4528-B288-1260FC5F0390}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{4F86F7F8-9696-4528-B288-1260FC5F0390}.Release|Any CPU.Build.0 = Release|Any CPU
+		{EA622E1F-7B9A-481D-93C4-1C9A626FDE17}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{EA622E1F-7B9A-481D-93C4-1C9A626FDE17}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{EA622E1F-7B9A-481D-93C4-1C9A626FDE17}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{EA622E1F-7B9A-481D-93C4-1C9A626FDE17}.Release|Any CPU.Build.0 = Release|Any CPU
+		{C9460714-E572-4FD4-9EA8-4AEBD9E74D5E}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{C9460714-E572-4FD4-9EA8-4AEBD9E74D5E}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{C9460714-E572-4FD4-9EA8-4AEBD9E74D5E}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{C9460714-E572-4FD4-9EA8-4AEBD9E74D5E}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 EndGlobal

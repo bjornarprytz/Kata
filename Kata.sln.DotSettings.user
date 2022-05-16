@@ -15,6 +15,8 @@
       &lt;TestId&gt;NUnit3x::77666CAB-30CD-4627-81E1-D827E4611075::net6.0::Kata.Anagrams.Tests.Tests.GroupsAnagrams&lt;/TestId&gt;&#xD;
       &lt;TestId&gt;NUnit3x::4F86F7F8-9696-4528-B288-1260FC5F0390::net6.0::Kata.ConflictingObjectives.Tests.Tests.Readable&lt;/TestId&gt;&#xD;
       &lt;TestId&gt;NUnit3x::4F86F7F8-9696-4528-B288-1260FC5F0390::net6.0::Kata.ConflictingObjectives.Tests.Tests.Fast&lt;/TestId&gt;&#xD;
+      &lt;TestId&gt;NUnit3x::EA622E1F-7B9A-481D-93C4-1C9A626FDE17::net6.0::Kata.BackToTheCheckout.Tests.Tests.PricingRulesWork&lt;/TestId&gt;&#xD;
+      &lt;TestId&gt;NUnit3x::EA622E1F-7B9A-481D-93C4-1C9A626FDE17::net6.0::Kata.BackToTheCheckout.Tests.Tests.IncrementalPricingRulesWork&lt;/TestId&gt;&#xD;
     &lt;/TestAncestor&gt;&#xD;
     &lt;Project Location="C:\Users\bjorn\source\repos\Kata\Kata.BusinessRules.Tests" Presentation="&amp;lt;Kata.BusinessRules.Tests&amp;gt;" /&gt;&#xD;
     &lt;Project Location="E:\source\repos\Kata\Kata.ConflictingObjectives.Tests" Presentation="&amp;lt;Kata.ConflictingObjectives.Tests&amp;gt;" /&gt;&#xD;
