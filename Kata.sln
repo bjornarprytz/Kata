@@ -36,6 +36,10 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Kata.CountingCodeLines.Test
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Kata.CountingCodeLines", "Kata.CountingCodeLines\Kata.CountingCodeLines.csproj", "{280FD6F6-CB36-4DA5-83CC-81E287631CA0}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Kata.Trigrams", "Kata.Trigrams\Kata.Trigrams.csproj", "{A6887B5E-9022-4FD4-88F6-5ADBF421ED3A}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Kata.Trigrams.Tests", "Kata.Trigrams.Tests\Kata.Trigrams.Tests.csproj", "{34C09AA8-9B84-4082-A405-25C0C5665797}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -114,5 +118,13 @@ Global
 		{280FD6F6-CB36-4DA5-83CC-81E287631CA0}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{280FD6F6-CB36-4DA5-83CC-81E287631CA0}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{280FD6F6-CB36-4DA5-83CC-81E287631CA0}.Release|Any CPU.Build.0 = Release|Any CPU
+		{A6887B5E-9022-4FD4-88F6-5ADBF421ED3A}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{A6887B5E-9022-4FD4-88F6-5ADBF421ED3A}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{A6887B5E-9022-4FD4-88F6-5ADBF421ED3A}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{A6887B5E-9022-4FD4-88F6-5ADBF421ED3A}.Release|Any CPU.Build.0 = Release|Any CPU
+		{34C09AA8-9B84-4082-A405-25C0C5665797}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{34C09AA8-9B84-4082-A405-25C0C5665797}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{34C09AA8-9B84-4082-A405-25C0C5665797}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{34C09AA8-9B84-4082-A405-25C0C5665797}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 EndGlobal
