@@ -40,6 +40,14 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Kata.Trigrams", "Kata.Trigr
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Kata.Trigrams.Tests", "Kata.Trigrams.Tests\Kata.Trigrams.Tests.csproj", "{34C09AA8-9B84-4082-A405-25C0C5665797}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Kata.ADiversion", "Kata.ADiversion\Kata.ADiversion.csproj", "{9CF5758D-7B54-4B69-B7C5-240912029A15}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Kata.ADiversion.Test", "Kata.ADiversion.Test\Kata.ADiversion.Test.csproj", "{8813C7EA-7F5D-436A-93CF-96419B3C2779}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "TransitiveDependencies.Tests", "TransitiveDependencies.Tests\TransitiveDependencies.Tests.csproj", "{3899F8B9-5DED-47E3-BBF4-921556490CD3}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Kata.TransitiveDependencies", "Kata.TransitiveDependencies\Kata.TransitiveDependencies.csproj", "{3AEFB231-527A-4CAD-9E79-A204A84A8ACD}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -126,5 +134,21 @@ Global
 		{34C09AA8-9B84-4082-A405-25C0C5665797}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{34C09AA8-9B84-4082-A405-25C0C5665797}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{34C09AA8-9B84-4082-A405-25C0C5665797}.Release|Any CPU.Build.0 = Release|Any CPU
+		{9CF5758D-7B54-4B69-B7C5-240912029A15}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{9CF5758D-7B54-4B69-B7C5-240912029A15}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{9CF5758D-7B54-4B69-B7C5-240912029A15}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{9CF5758D-7B54-4B69-B7C5-240912029A15}.Release|Any CPU.Build.0 = Release|Any CPU
+		{8813C7EA-7F5D-436A-93CF-96419B3C2779}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{8813C7EA-7F5D-436A-93CF-96419B3C2779}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{8813C7EA-7F5D-436A-93CF-96419B3C2779}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{8813C7EA-7F5D-436A-93CF-96419B3C2779}.Release|Any CPU.Build.0 = Release|Any CPU
+		{3899F8B9-5DED-47E3-BBF4-921556490CD3}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{3899F8B9-5DED-47E3-BBF4-921556490CD3}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{3899F8B9-5DED-47E3-BBF4-921556490CD3}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{3899F8B9-5DED-47E3-BBF4-921556490CD3}.Release|Any CPU.Build.0 = Release|Any CPU
+		{3AEFB231-527A-4CAD-9E79-A204A84A8ACD}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{3AEFB231-527A-4CAD-9E79-A204A84A8ACD}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{3AEFB231-527A-4CAD-9E79-A204A84A8ACD}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{3AEFB231-527A-4CAD-9E79-A204A84A8ACD}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 EndGlobal

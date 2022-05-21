@@ -21,10 +21,14 @@
       &lt;TestId&gt;NUnit3x::CE287CA7-1D99-4C13-8681-DC8CF00FEA10::net6.0::Kata.CountingCodeLines.Tests.Tests.Test1&lt;/TestId&gt;&#xD;
       &lt;TestId&gt;NUnit3x::34C09AA8-9B84-4082-A405-25C0C5665797::net6.0::Kata.Trigrams.Tests.Tests.Test1&lt;/TestId&gt;&#xD;
       &lt;TestId&gt;NUnit3x::34C09AA8-9B84-4082-A405-25C0C5665797::net6.0::Kata.Trigrams.Tests.Tests.WeightOfWordsMatter&lt;/TestId&gt;&#xD;
+      &lt;TestId&gt;NUnit3x::8813C7EA-7F5D-436A-93CF-96419B3C2779::net6.0::Kata.ADiversion.Test.Tests.Test1&lt;/TestId&gt;&#xD;
+      &lt;TestId&gt;NUnit3x::8813C7EA-7F5D-436A-93CF-96419B3C2779::net6.0::Kata.ADiversion.Test.Tests.NonPositiveNDigits_ShouldThrowArgumentException&lt;/TestId&gt;&#xD;
+      &lt;TestId&gt;NUnit3x::3899F8B9-5DED-47E3-BBF4-921556490CD3::net6.0::TransitiveDependencies.Tests.Tests.Test1&lt;/TestId&gt;&#xD;
     &lt;/TestAncestor&gt;&#xD;
     &lt;Project Location="C:\Users\bjorn\source\repos\Kata\Kata.BusinessRules.Tests" Presentation="&amp;lt;Kata.BusinessRules.Tests&amp;gt;" /&gt;&#xD;
     &lt;Project Location="E:\source\repos\Kata\Kata.ConflictingObjectives.Tests" Presentation="&amp;lt;Kata.ConflictingObjectives.Tests&amp;gt;" /&gt;&#xD;
     &lt;Project Location="E:\source\repos\Kata\Kata.SortingItOut.Tests" Presentation="&amp;lt;Kata.SortingItOut.Tests&amp;gt;" /&gt;&#xD;
     &lt;ProjectFile&gt;CE287CA7-1D99-4C13-8681-DC8CF00FEA10/f:UnitTest1.cs&lt;/ProjectFile&gt;&#xD;
+    &lt;Project Location="E:\source\repos\Kata\TransitiveDependencies.Tests" Presentation="&amp;lt;TransitiveDependencies.Tests&amp;gt;" /&gt;&#xD;
   &lt;/Or&gt;&#xD;
 &lt;/SessionState&gt;</s:String></wpf:ResourceDictionary>
