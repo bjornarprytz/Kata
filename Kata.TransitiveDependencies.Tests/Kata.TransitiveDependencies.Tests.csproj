@@ -5,6 +5,8 @@
         <Nullable>enable</Nullable>
 
         <IsPackable>false</IsPackable>
+
+        <RootNamespace>TransitiveDependencies.Tests</RootNamespace>
     </PropertyGroup>
 
     <ItemGroup>

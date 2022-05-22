@@ -5,30 +5,31 @@ namespace Kata.ConflictingObjectives;
 
 public class WordTree
 {
-    private readonly LetterNode _root;
+    protected readonly LetterNode Root;
 
     public WordTree()
     {
-        _root = new LetterNode();
+        Root = new LetterNode();
     }
         
     public void Add(string word)
     {
-        var current = word.Aggregate(_root, (current1, letter) => current1.AddChild(letter));
+        var current = word.Aggregate(Root, (current1, letter) => current1.AddChild(letter));
 
         current.EndOfWord();
     }
 
     public bool Contains(string word)
     {
-        var current = _root;
+        var current = Root;
 
         var result = word.All(letter => current!.TryGetChild(letter, out current)) 
                             && current.IsEndOfWord;
 
         return result;
     }
-    private class LetterNode
+
+    protected class LetterNode
     {
         private readonly Dictionary<char, LetterNode> _children = new();
         public bool IsEndOfWord { get; private set; }
@@ -54,6 +55,11 @@ public class WordTree
             child = _children[letter];
 
             return true;
+        }
+
+        public IReadOnlyDictionary<char, LetterNode> PossibleNextLetters()
+        {
+            return _children;
         }
 
         public void EndOfWord()

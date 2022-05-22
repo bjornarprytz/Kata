@@ -44,9 +44,13 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Kata.ADiversion", "Kata.ADi
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Kata.ADiversion.Test", "Kata.ADiversion.Test\Kata.ADiversion.Test.csproj", "{8813C7EA-7F5D-436A-93CF-96419B3C2779}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "TransitiveDependencies.Tests", "TransitiveDependencies.Tests\TransitiveDependencies.Tests.csproj", "{3899F8B9-5DED-47E3-BBF4-921556490CD3}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Kata.TransitiveDependencies.Tests", "Kata.TransitiveDependencies.Tests\Kata.TransitiveDependencies.Tests.csproj", "{3899F8B9-5DED-47E3-BBF4-921556490CD3}"
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Kata.TransitiveDependencies", "Kata.TransitiveDependencies\Kata.TransitiveDependencies.csproj", "{3AEFB231-527A-4CAD-9E79-A204A84A8ACD}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Kata.WordChains", "Kata.WordChains\Kata.WordChains.csproj", "{1DA1E89E-FCE9-4F48-AB11-E5D6105D5F86}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Kata.WordChains.Tests", "Kata.WordChains.Tests\Kata.WordChains.Tests.csproj", "{5E9FECF0-2830-4CBC-8179-F3B18FEEA6B9}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -150,5 +154,13 @@ Global
 		{3AEFB231-527A-4CAD-9E79-A204A84A8ACD}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{3AEFB231-527A-4CAD-9E79-A204A84A8ACD}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{3AEFB231-527A-4CAD-9E79-A204A84A8ACD}.Release|Any CPU.Build.0 = Release|Any CPU
+		{1DA1E89E-FCE9-4F48-AB11-E5D6105D5F86}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{1DA1E89E-FCE9-4F48-AB11-E5D6105D5F86}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{1DA1E89E-FCE9-4F48-AB11-E5D6105D5F86}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{1DA1E89E-FCE9-4F48-AB11-E5D6105D5F86}.Release|Any CPU.Build.0 = Release|Any CPU
+		{5E9FECF0-2830-4CBC-8179-F3B18FEEA6B9}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{5E9FECF0-2830-4CBC-8179-F3B18FEEA6B9}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{5E9FECF0-2830-4CBC-8179-F3B18FEEA6B9}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{5E9FECF0-2830-4CBC-8179-F3B18FEEA6B9}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 EndGlobal
