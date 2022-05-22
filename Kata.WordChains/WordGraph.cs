@@ -33,53 +33,22 @@ public class WordGraph
     {
         path = new List<string>();
 
-        var openSet = new PriorityQueue<WordNode, int>();
-        openSet.Enqueue(_graph[from], 0);
-        var cameFrom = new Dictionary<WordNode, WordNode>();
-        var gScore = new Dictionary<WordNode, int> { { _graph[from], 0 } };
 
-        while (openSet.TryDequeue(out var current, out var priority))
+        if (_graph.ContainsKey(from) && _graph.ContainsKey(to)
+            &&
+            _graph[from].AStarTo(_graph[to], out var nodePath)
+        )
         {
-            if (current.Word == to)
-            {
-                path = ReconstructPathFrom(current).ToList();
-                return true;
-            }
-
-            foreach (var neighbour in current.Neighbours)
-            {
-                var tentativeScore = gScore[current] + 1;
-                if (gScore.ContainsKey(neighbour) && tentativeScore >= gScore[neighbour]) continue;
-                
-                cameFrom[neighbour] = current;
-                gScore[neighbour] = tentativeScore;
-                if (openSet.UnorderedItems.All(tuple => tuple.Element != neighbour))
-                {
-                    openSet.Enqueue(neighbour, tentativeScore);
-                }
-            }
+            path = nodePath.Select(n => n.Word).ToList();
+            return true;
         }
-
+        
         return false;
+        
 
-        IEnumerable<string> ReconstructPathFrom(WordNode destination)
-        {
-            var path = new LinkedList<string>();
-            path.AddFirst(destination.Word);
-
-            var previous = destination;
-
-            while (cameFrom!.ContainsKey(previous))
-            {
-                previous = cameFrom[previous];
-                path.AddFirst(previous.Word);
-            }
-            
-            return path;
-        }
     }
 
-    private class WordNode
+    private class WordNode : IGraphNode<WordNode>
     {
         private readonly Dictionary<string, WordNode> _connections = new();
 
