@@ -52,6 +52,10 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Kata.WordChains", "Kata.Wor
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Kata.WordChains.Tests", "Kata.WordChains.Tests\Kata.WordChains.Tests.csproj", "{5E9FECF0-2830-4CBC-8179-F3B18FEEA6B9}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Kata.Klondike.Rules.Tests", "Kata.Klondike.Rules.Tests\Kata.Klondike.Rules.Tests.csproj", "{D799E2A8-CD7D-46F6-8300-512E3E3ADB8C}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Kata.Klondike.Rules", "Kata.Klondike.Rules\Kata.Klondike.Rules.csproj", "{B4F2B210-7DEB-413D-86C1-6F4793456967}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -162,5 +166,13 @@ Global
 		{5E9FECF0-2830-4CBC-8179-F3B18FEEA6B9}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{5E9FECF0-2830-4CBC-8179-F3B18FEEA6B9}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{5E9FECF0-2830-4CBC-8179-F3B18FEEA6B9}.Release|Any CPU.Build.0 = Release|Any CPU
+		{D799E2A8-CD7D-46F6-8300-512E3E3ADB8C}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{D799E2A8-CD7D-46F6-8300-512E3E3ADB8C}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{D799E2A8-CD7D-46F6-8300-512E3E3ADB8C}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{D799E2A8-CD7D-46F6-8300-512E3E3ADB8C}.Release|Any CPU.Build.0 = Release|Any CPU
+		{B4F2B210-7DEB-413D-86C1-6F4793456967}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{B4F2B210-7DEB-413D-86C1-6F4793456967}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{B4F2B210-7DEB-413D-86C1-6F4793456967}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{B4F2B210-7DEB-413D-86C1-6F4793456967}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 EndGlobal
