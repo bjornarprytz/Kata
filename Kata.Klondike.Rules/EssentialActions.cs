@@ -108,8 +108,25 @@ public static class GameAction
          * Move the top card of the discard pile to one of the tableau piles.
          * This card must be one less in rank and opposite in color to the card at the top of the destination tableau.
          */
+        
+        if (!gameState.Discard.TryPopDiscard(out var cardToMove, out var newDiscard))
+        {
+            return gameState;
+        }
 
-        return gameState;
+        var pileIndex = gameState.Piles.IndexOf(pile);
+
+        if (pileIndex == -1 || !cardToMove!.TryMoveTo(gameState.Piles[pileIndex], out var newTargetPile))
+            return gameState;
+        
+        return gameState with
+        {
+            Piles = new List<Pile>(gameState.Piles)
+            {
+                [pileIndex] = newTargetPile
+            },
+            Discard = newDiscard
+        };
     }
 
     public static GameState MovePileToOtherPile(this GameState gameState, Pile source, Pile target)
@@ -120,6 +137,25 @@ public static class GameAction
          * the sequence moved) must be one less in rank and opposite in color to the card at the top of
          * the destination tableau. If the move leaves a face-down card to the top of the original pile, turn it over.
          */
+        
+        var sourcePileIndex = gameState.Piles.IndexOf(source);
+        var targetPileIndex = gameState.Piles.IndexOf(target);
+
+        if (sourcePileIndex == -1 || targetPileIndex == -1)
+            return gameState;
+
+        if (source.TryMoveTo(target, out var newSourcePile, out var newTargetPile))
+        {
+            return CheckEmptyPiles(
+                gameState with
+                {
+                    Piles = new List<Pile>(gameState.Piles)
+                    {
+                        [sourcePileIndex] = newSourcePile,
+                        [targetPileIndex] = newTargetPile
+                    }
+                });
+        }
 
         return gameState;
     }
@@ -150,4 +186,6 @@ public static class GameAction
 
         return gameState with { FaceDownCards = cardDealer.ToEnumerable().ToList() };
     }
+    
+    
 }

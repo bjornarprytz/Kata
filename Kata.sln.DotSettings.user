@@ -1,5 +1,5 @@
 ﻿<wpf:ResourceDictionary xml:space="preserve" xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml" xmlns:s="clr-namespace:System;assembly=mscorlib" xmlns:ss="urn:shemas-jetbrains-com:settings-storage-xaml" xmlns:wpf="http://schemas.microsoft.com/winfx/2006/xaml/presentation">
-	<s:String x:Key="/Default/Environment/UnitTesting/UnitTestSessionStore/Sessions/=599b9113_002D4f64_002D4860_002D990d_002D2eb1add80388/@EntryIndexedValue">&lt;SessionState ContinuousTestingMode="0" IsActive="True" Name="PlayerPay" xmlns="urn:schemas-jetbrains-com:jetbrains-ut-session"&gt;&#xD;
+	<s:String x:Key="/Default/Environment/UnitTesting/UnitTestSessionStore/Sessions/=599b9113_002D4f64_002D4860_002D990d_002D2eb1add80388/@EntryIndexedValue">&lt;SessionState ContinuousTestingMode="0" Name="PlayerPay" xmlns="urn:schemas-jetbrains-com:jetbrains-ut-session"&gt;&#xD;
   &lt;Or&gt;&#xD;
     &lt;ProjectFile&gt;83CACF0B-F0F5-4638-8BDB-37E01A560A54/f:UnitTest1.cs&lt;/ProjectFile&gt;&#xD;
     &lt;TestAncestor&gt;&#xD;
@@ -37,6 +37,6 @@
     &lt;ProjectFile&gt;D799E2A8-CD7D-46F6-8300-512E3E3ADB8C/f:GameActionTests.cs&lt;/ProjectFile&gt;&#xD;
   &lt;/Or&gt;&#xD;
 &lt;/SessionState&gt;</s:String>
-	<s:String x:Key="/Default/Environment/UnitTesting/UnitTestSessionStore/Sessions/=d38e1a28_002D83c1_002D486e_002D93d1_002Debbae7559568/@EntryIndexedValue">&lt;SessionState ContinuousTestingMode="0" Name="MoveCardToFoundation_CardMovesFromDiscardToSuitableFoundation(2,Hearts)" xmlns="urn:schemas-jetbrains-com:jetbrains-ut-session"&gt;&#xD;
+	<s:String x:Key="/Default/Environment/UnitTesting/UnitTestSessionStore/Sessions/=d38e1a28_002D83c1_002D486e_002D93d1_002Debbae7559568/@EntryIndexedValue">&lt;SessionState ContinuousTestingMode="0" IsActive="True" Name="MoveCardToFoundation_CardMovesFromDiscardToSuitableFoundation(2,Hearts)" xmlns="urn:schemas-jetbrains-com:jetbrains-ut-session"&gt;&#xD;
   &lt;Project Location="E:\source\repos\Kata\Kata.Klondike.Rules.Tests" Presentation="&amp;lt;Kata.Klondike.Rules.Tests&amp;gt;" /&gt;&#xD;
 &lt;/SessionState&gt;</s:String></wpf:ResourceDictionary>
