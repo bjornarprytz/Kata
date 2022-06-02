@@ -8,6 +8,8 @@ namespace Kata.Klondike.Strategy;
 
 public static class GameStateExtensions
 {
+    public static IEnumerable<StateTransition> Neighbours(this GameState gameState, ref Dictionary<string, GameState> knownGameStates) => gameState.GetPossibleTransitions(ref knownGameStates);
+    
     public static string ComputeHash(this GameState gameState)
     {
         var json = JsonConvert.SerializeObject(gameState with { FaceDownCards = ArraySegment<Card>.Empty });
@@ -26,35 +28,47 @@ public static class GameStateExtensions
         return Encoding.ASCII.GetString(sha.ComputeHash(Encoding.UTF8.GetBytes(json)));
     }
 
-    public static IEnumerable<StateTransition> GetPossibleTransitions(this GameState gameState)
+    private static IEnumerable<StateTransition> GetPossibleTransitions(this GameState gameState, ref Dictionary<string, GameState> knownGameStates)
     {
         var currentHash = gameState.ComputeHash();
-        var stageHash = gameState.ComputeStageHash();
 
-        var possibleTransitions = new List<StateTransition>();
+        var transitiveActions = new List<StateTransition>();
 
-        /*
-         * TODO: There's potential to prune possibleActions.
-         * No use trying a part of the gamestate that we _know_ hasn't changed.
-         * E.g. don't re-try piles after calling PopStock()
-         *
-         * Maybe cache results, and set cache keys dirty when they change
-         */
-        
-        
-        var possibleActions = new List<Expression<Func<GameState, GameState>>>(); 
+        foreach (var transitionAction in CreatePossibleActionList(gameState.Piles.Count))
+        {
+            var newGameState = transitionAction(gameState);
+
+            var newHash = newGameState.ComputeHash();
+
+            if (newHash == currentHash) continue;
+            
+            transitiveActions.Add(new StateTransition(transitionAction, currentHash, newHash, newGameState.ComputeStageHash()));
+            
+            if (!knownGameStates.ContainsKey(newHash))
+            {
+                knownGameStates.Add(newHash, newGameState);
+            }
+        }
+
+        return transitiveActions;
+    }
+
+    private static IReadOnlyList<Func<GameState, GameState>> PossibleActions { get; } = CreatePossibleActionList();
+    private static IReadOnlyList<Func<GameState, GameState>> CreatePossibleActionList(int pileCount=7)
+    {
+        var possibleActions = new List<Func<GameState, GameState>>(); 
 
         possibleActions.Add(gs => gs.MoveCardFromDiscardToFoundation());
         possibleActions.Add(gs => gs.PopStock());
         
-        for (var i = 0; i < gameState.Piles.Count; i++)
+        for (var i = 0; i < pileCount; i++)
         {
             var sourceIndex = i;
             
-            possibleActions.Add(gs => gs.MoveCardFromDiscardToTableauPile(gameState.Piles[sourceIndex]));
-            possibleActions.Add(gs => gs.MoveCardFromPileToFoundation(gameState.Piles[sourceIndex]));
+            possibleActions.Add(gs => gs.MoveCardFromDiscardToTableauPile(gs.Piles[sourceIndex]));
+            possibleActions.Add(gs => gs.MoveCardFromPileToFoundation(gs.Piles[sourceIndex]));
             
-            for (var y = 0; y < gameState.Piles.Count; y++)
+            for (var y = 0; y < pileCount; y++)
             {
                 if (i == y) continue;
                 var targetIndex = y;
@@ -63,16 +77,6 @@ public static class GameStateExtensions
             }
         }
 
-        foreach (var transitionAction in possibleActions)
-        {
-            var newGameState = transitionAction.Compile().Invoke(gameState);
-
-            if (newGameState.ComputeHash() != currentHash)
-            {
-                possibleTransitions.Add(new StateTransition(gameState, transitionAction));
-            }
-        }
-
-        return possibleTransitions;
+        return possibleActions;
     }
 }

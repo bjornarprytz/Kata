@@ -37,7 +37,10 @@
     &lt;ProjectFile&gt;D799E2A8-CD7D-46F6-8300-512E3E3ADB8C/f:GameActionTests.cs&lt;/ProjectFile&gt;&#xD;
   &lt;/Or&gt;&#xD;
 &lt;/SessionState&gt;</s:String>
-	<s:String x:Key="/Default/Environment/UnitTesting/UnitTestSessionStore/Sessions/=d38e1a28_002D83c1_002D486e_002D93d1_002Debbae7559568/@EntryIndexedValue">&lt;SessionState ContinuousTestingMode="0" IsActive="True" Name="MoveCardToFoundation_CardMovesFromDiscardToSuitableFoundation(2,Hearts)" xmlns="urn:schemas-jetbrains-com:jetbrains-ut-session"&gt;&#xD;
+	<s:String x:Key="/Default/Environment/UnitTesting/UnitTestSessionStore/Sessions/=b05a58a8_002D9736_002D4709_002D8262_002Dc66e7c8d10f6/@EntryIndexedValue">&lt;SessionState ContinuousTestingMode="0" IsActive="True" Name="TryToWin_MultipleUnknowns_FindsWin #2" xmlns="urn:schemas-jetbrains-com:jetbrains-ut-session"&gt;&#xD;
+  &lt;Project Location="E:\source\repos\Kata\Kata.Klondike.Strategy.Tests" Presentation="&amp;lt;Kata.Klondike.Strategy.Tests&amp;gt;" /&gt;&#xD;
+&lt;/SessionState&gt;</s:String>
+	<s:String x:Key="/Default/Environment/UnitTesting/UnitTestSessionStore/Sessions/=d38e1a28_002D83c1_002D486e_002D93d1_002Debbae7559568/@EntryIndexedValue">&lt;SessionState ContinuousTestingMode="0" Name="MoveCardToFoundation_CardMovesFromDiscardToSuitableFoundation(2,Hearts)" xmlns="urn:schemas-jetbrains-com:jetbrains-ut-session"&gt;&#xD;
   &lt;Or&gt;&#xD;
     &lt;Project Location="E:\source\repos\Kata\Kata.Klondike.Rules.Tests" Presentation="&amp;lt;Kata.Klondike.Rules.Tests&amp;gt;" /&gt;&#xD;
     &lt;ProjectFile&gt;883EC670-1AC0-4FFA-B65D-3AD0EC6E9BCC/f:UnitTest1.cs&lt;/ProjectFile&gt;&#xD;
@@ -46,5 +49,11 @@
       &lt;TestId&gt;NUnit3x::883EC670-1AC0-4FFA-B65D-3AD0EC6E9BCC::net6.0::Kata.Klondike.Strategy.Tests.KlondikePlayerTests.MakeNextMove_PossibleToProgress_FindOneTransition&lt;/TestId&gt;&#xD;
       &lt;TestId&gt;NUnit3x::883EC670-1AC0-4FFA-B65D-3AD0EC6E9BCC::net6.0::Kata.Klondike.Strategy.Tests.KlondikePlayerTests.MakeNextMove_PossibleToProgress_FindTwoTransitions&lt;/TestId&gt;&#xD;
     &lt;/TestAncestor&gt;&#xD;
+    &lt;Project Location="E:\source\repos\Kata\Kata.Klondike.Strategy.Tests" Presentation="&amp;lt;Kata.Klondike.Strategy.Tests&amp;gt;" /&gt;&#xD;
   &lt;/Or&gt;&#xD;
+&lt;/SessionState&gt;</s:String>
+	<s:String x:Key="/Default/Environment/UnitTesting/UnitTestSessionStore/Sessions/=e42b3e59_002Db058_002D44c7_002D870f_002D747c5e307923/@EntryIndexedValue">&lt;SessionState ContinuousTestingMode="0" Name="TryToWin_MultipleUnknowns_FindsWin" xmlns="urn:schemas-jetbrains-com:jetbrains-ut-session"&gt;&#xD;
+  &lt;TestAncestor&gt;&#xD;
+    &lt;TestId&gt;NUnit3x::883EC670-1AC0-4FFA-B65D-3AD0EC6E9BCC::net6.0::Kata.Klondike.Strategy.Tests.KlondikePlayerTests.TryToWin_MultipleUnknowns_FindsWin&lt;/TestId&gt;&#xD;
+  &lt;/TestAncestor&gt;&#xD;
 &lt;/SessionState&gt;</s:String></wpf:ResourceDictionary>

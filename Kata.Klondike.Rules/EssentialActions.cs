@@ -174,7 +174,7 @@ public static class GameAction
 
     private static GameState CheckForVictory(GameState gameState)
     {
-        if (gameState.Foundations.Values.All(foundation => foundation.TopCard is { Value: 13 }))
+        if (gameState.FaceDownCards.Count == 0) // Simplified victory condition because completing foundations is a formality at this stage
             return gameState with { Victorious = true };
 
         return gameState;
