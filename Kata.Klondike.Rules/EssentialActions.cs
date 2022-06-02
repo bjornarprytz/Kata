@@ -68,27 +68,40 @@ public static class GameAction
         }
     }
 
-    public static GameState MoveCardToFoundation(this GameState gameState, Card card)
+    public static GameState MoveCardFromDiscardToFoundation(this GameState gameState)
     {
-        if (!gameState.Foundations.TryAddCard(card, out var newFoundations))
+        if (!gameState.Discard.TryPopDiscard(out var card, out var newDiscard))
+            return gameState;
+        
+        if (!gameState.Foundations.TryAddCard(card!, out var newFoundations))
+        {
+            return gameState;
+        }
+        
+        return gameState with
+        {
+            Discard = newDiscard,
+            Foundations = newFoundations
+        };
+    }
+    
+    public static GameState MoveCardFromPileToFoundation(this GameState gameState, Pile pile)
+    {
+        if (!pile.TryPopPile(out var card, out var newPile))
+            return gameState;
+        
+        if (!gameState.Foundations.TryAddCard(card!, out var newFoundations))
         {
             return gameState;
         }
 
-        if (gameState.Discard.TryPopDiscard(card, out var newDiscard))
-        {
-            return gameState with
-            {
-                Discard = newDiscard,
-                Foundations = newFoundations
-            };
-        }
+        var index = gameState.Piles.IndexOf(pile);
 
-        foreach (var (pile, index) in gameState.Piles.Select((p, i) => (p, i)))
-        {
-            if (!pile.TryPopPile(card, out var newPile)) continue;
-            
-            return CheckEmptyPiles(
+        if (index == -1)
+            return gameState;
+        
+        return 
+            CheckForVictory(CheckEmptyPiles(
                 gameState with
                 {
                     Piles = new List<Pile>(gameState.Piles)
@@ -96,8 +109,7 @@ public static class GameAction
                         [index] = newPile
                     },
                     Foundations = newFoundations
-                });
-        }
+                }));
 
         return gameState;
     }
@@ -160,6 +172,13 @@ public static class GameAction
         return gameState;
     }
 
+    private static GameState CheckForVictory(GameState gameState)
+    {
+        if (gameState.Foundations.Values.All(foundation => foundation.TopCard is { Value: 13 }))
+            return gameState with { Victorious = true };
+
+        return gameState;
+    }
 
     private static GameState CheckEmptyPiles(GameState gameState)
     {

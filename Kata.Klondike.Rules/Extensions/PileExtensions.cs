@@ -18,6 +18,24 @@ public static class PileExtensions
 
         return false;
     }
+    
+    public static bool TryPopPile(this Pile pile, out Card? cardToPop, out Pile newPile)
+    {
+        if (pile.FaceUp.Count == 0)
+        {
+            cardToPop = null;
+            newPile = pile;
+            return false;
+        }
+
+        cardToPop = pile.FaceUp[0];
+        newPile = pile with
+        {
+            FaceUp = pile.FaceUp.Skip(1).ToList()
+        };
+
+        return true;
+    }
 
     public static bool TryMoveTo(this Pile sourcePile, Pile targetPile, out Pile newSourcePile, out Pile newTargetPile)
     {

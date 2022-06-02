@@ -38,5 +38,13 @@
   &lt;/Or&gt;&#xD;
 &lt;/SessionState&gt;</s:String>
 	<s:String x:Key="/Default/Environment/UnitTesting/UnitTestSessionStore/Sessions/=d38e1a28_002D83c1_002D486e_002D93d1_002Debbae7559568/@EntryIndexedValue">&lt;SessionState ContinuousTestingMode="0" IsActive="True" Name="MoveCardToFoundation_CardMovesFromDiscardToSuitableFoundation(2,Hearts)" xmlns="urn:schemas-jetbrains-com:jetbrains-ut-session"&gt;&#xD;
-  &lt;Project Location="E:\source\repos\Kata\Kata.Klondike.Rules.Tests" Presentation="&amp;lt;Kata.Klondike.Rules.Tests&amp;gt;" /&gt;&#xD;
+  &lt;Or&gt;&#xD;
+    &lt;Project Location="E:\source\repos\Kata\Kata.Klondike.Rules.Tests" Presentation="&amp;lt;Kata.Klondike.Rules.Tests&amp;gt;" /&gt;&#xD;
+    &lt;ProjectFile&gt;883EC670-1AC0-4FFA-B65D-3AD0EC6E9BCC/f:UnitTest1.cs&lt;/ProjectFile&gt;&#xD;
+    &lt;TestAncestor&gt;&#xD;
+      &lt;TestId&gt;NUnit3x::883EC670-1AC0-4FFA-B65D-3AD0EC6E9BCC::net6.0::Kata.Klondike.Strategy.Tests.KlondikePlayerTests.MakeNextMove_ImpossibleToProgress&lt;/TestId&gt;&#xD;
+      &lt;TestId&gt;NUnit3x::883EC670-1AC0-4FFA-B65D-3AD0EC6E9BCC::net6.0::Kata.Klondike.Strategy.Tests.KlondikePlayerTests.MakeNextMove_PossibleToProgress_FindOneTransition&lt;/TestId&gt;&#xD;
+      &lt;TestId&gt;NUnit3x::883EC670-1AC0-4FFA-B65D-3AD0EC6E9BCC::net6.0::Kata.Klondike.Strategy.Tests.KlondikePlayerTests.MakeNextMove_PossibleToProgress_FindTwoTransitions&lt;/TestId&gt;&#xD;
+    &lt;/TestAncestor&gt;&#xD;
+  &lt;/Or&gt;&#xD;
 &lt;/SessionState&gt;</s:String></wpf:ResourceDictionary>

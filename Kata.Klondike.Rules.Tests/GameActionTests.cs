@@ -1,3 +1,4 @@
+using System;
 using System.Linq;
 using FluentAssertions;
 using NUnit.Framework;
@@ -34,6 +35,25 @@ public class GameActionTests
         gameState.Stock.Cards.Count.Should().Be(24);
 
         gameState.FaceDownCards.Count.Should().Be(21);
+    }
+    
+    [Test]
+    public void InitGameState_CardsShouldBeExactlyADeckOfCards()
+    {
+        var gameState = GameAction.Init();
+
+        var allCards = gameState.Stock.Cards.Concat(gameState.FaceDownCards)
+            .Concat(gameState.Piles.SelectMany(pile => pile.FaceUp)).ToList();
+
+        allCards.Should().HaveCount(52);
+
+        foreach (var suit in typeof(Suit).GetEnumValues().Cast<Suit>())
+        {
+            foreach (var value in Enumerable.Range(1, 13))
+            {
+                allCards.Should().Contain(new Card(value, suit));
+            }
+        }
     }
 
     [Test]
@@ -89,17 +109,19 @@ public class GameActionTests
     [TestCase(13, Suit.Diamonds)]
     [TestCase(3, Suit.Clubs)]
     [TestCase(13, Suit.Spades)]
-    public void MoveCardToFoundation_NoSuitableFoundation_StateIsUnchanged(int cardValue, Suit cardSuit)
+    public void MoveCardFromPileToFoundation_FoundationNotSuitable_StateIsUnchanged(int cardValue, Suit cardSuit)
     {
         var cardToMove = new Card(cardValue, cardSuit);
 
+        var pile = Create.Pile(cardToMove);
+        
         var gameState = GameAction.Init() with
         {
             Foundations = Create.Foundations(1, 4, 0, 5),
-            Piles = new [] { Create.Pile(cardToMove) }
+            Piles = new [] { pile }
         };
 
-        var newGameState = gameState.MoveCardToFoundation(cardToMove);
+        var newGameState = gameState.MoveCardFromPileToFoundation(pile);
 
         newGameState.Should().Be(gameState);
     }
@@ -109,7 +131,7 @@ public class GameActionTests
     [TestCase(5, Suit.Diamonds)]
     [TestCase(1, Suit.Clubs)]
     [TestCase(6, Suit.Spades)]
-    public void MoveCardToFoundation_CardMovesFromDiscardToSuitableFoundation(int cardValue, Suit cardSuit)
+    public void MoveCardFromDiscardToFoundation_CardMovesFromDiscardToSuitableFoundation(int cardValue, Suit cardSuit)
     {
         var restOfDiscard = new []
         {
@@ -127,7 +149,7 @@ public class GameActionTests
             Discard = Create.Discard(discard)
         };
 
-        var newGameState = gameState.MoveCardToFoundation(cardToMove);
+        var newGameState = gameState.MoveCardFromDiscardToFoundation();
 
         newGameState.Discard.Cards.Should().NotContain(cardToMove);
         newGameState.Discard.Cards.Should().ContainInOrder(restOfDiscard);
@@ -158,7 +180,7 @@ public class GameActionTests
             Piles = new [] { pile }
         };
         
-        var newGameState = gameState.MoveCardToFoundation(cardToMove);
+        var newGameState = gameState.MoveCardFromPileToFoundation(pile);
 
         newGameState.Piles[0].FaceUp.Should().NotContain(cardToMove);
         newGameState.Piles[0].FaceUp.Should().ContainInOrder(restOfPile);
@@ -256,7 +278,7 @@ public class GameActionTests
 
         var faceDownCards = gameState.FaceDownCards.ToList();
         
-        var newGameState = gameState.MoveCardToFoundation(cardToMove);
+        var newGameState = gameState.MoveCardFromPileToFoundation(pile);
 
         newGameState.FaceDownCards.Count.Should().Be(faceDownCards.Count - 1);
         newGameState.Piles[0].FaceDown.Should().Be(pile.FaceDown - 1);
@@ -372,5 +394,23 @@ public class GameActionTests
 
         newGameState.Piles[0].FaceUp.Should().NotContain(cardToMove);
         newGameState.Piles[1].FaceUp.Should().Contain(cardToMove);
+    }
+
+    [Test]
+    public void FoundationsFull_PlayerIsVictorious()
+    {
+        var cardToMove = Create.Clubs(13);
+
+        var sourcePile = Create.Pile(cardToMove);
+
+        var gameState = GameAction.Init() with
+        {
+            Piles = new [] { sourcePile },
+            Foundations = Create.Foundations(13, 13, 12, 13)
+        };
+
+        var newGameState = gameState.MoveCardFromPileToFoundation(sourcePile);
+
+        newGameState.Victorious.Should().BeTrue();
     }
 }

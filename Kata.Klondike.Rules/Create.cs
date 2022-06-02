@@ -2,12 +2,23 @@ namespace Kata.Klondike.Rules;
 
 public static class Create
 {
+    public static GameState Empty()
+    {
+        return new GameState(
+            new List<Pile>(),
+            new Dictionary<Suit, Foundation>(),
+            new Stock(new List<Card>()),
+            new Discard(new List<Card>()),
+            new List<Card>(), false);
+    }
+    
     public static Pile Pile(int faceDownCount, params Card[] cards) => new (cards.ToList(), faceDownCount);
     public static Pile Pile(params Card[] cards) => Pile(0, cards);
 
     
     public static Stock Stock(params Card[] cards) => new (cards);
     public static Discard Discard(params Card[] cards) => new (cards);
+    public static IReadOnlyList<T> List<T>(params T[] things) => new List<T>(things);
 
     public static IReadOnlyDictionary<Suit, Foundation> Foundations(
         int hearts=0, 
