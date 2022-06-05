@@ -2,7 +2,7 @@ using Kata.Klondike.Rules;
 
 namespace Kata.Klondike.Strategy;
 
-public class KlondikePlayer
+public class ExhaustiveKlondikePlayer : IKlondikePlayer
 {
     public GameState TryToWin(GameState gameState)
     {
@@ -23,43 +23,46 @@ public class KlondikePlayer
         return currentStage;
     }
     
-    public IEnumerable<StateTransition> FindTransitionsToNextStage(GameState currentGameState)
+    public static IEnumerable<StateTransition> FindTransitionsToNextStage(GameState currentGameState)
     {
+        // Based on A-Star
+        
         var originStageHash = currentGameState.ComputeStageHash();
         var originHash = currentGameState.ComputeHash();
 
         var knownStates = new Dictionary<string, GameState>{{originHash, currentGameState}};
         var openSet = new PriorityQueue<StateTransition, int>();
+        var cameFrom = new Dictionary<StateTransition, StateTransition>();
+        var gScore = new Dictionary<string, int> { { originHash, 0 } };
 
         foreach (var transition in currentGameState.Neighbours(ref knownStates))
         {
             openSet.Enqueue(transition, 0);
+            gScore[transition.DestinationHash] = 1;
         }
         
-        var cameFrom = new Dictionary<StateTransition, StateTransition>();
-        var gScore = new Dictionary<string, int> { { originHash, 0 } };
 
         while (openSet.TryDequeue(out var current, out var priority))
         {
             if (current.StageHash != originStageHash)
             {
-                return ReconstructPathFrom(current).ToList();
+                return ReconstructPathFrom(current);
             }
 
-            var currentHash = current.DestinationHash;
+            var currentState = knownStates[current.DestinationHash];
 
-            foreach (var neighbour in knownStates[currentHash].Neighbours(ref knownStates))
+            foreach (var neighbourState in currentState.Neighbours(ref knownStates))
             {
-                var neighbourHash = neighbour.SourceHash;
+                var neighbourHash = neighbourState.DestinationHash;
                 
-                var tentativeScore = gScore[current.SourceHash] + 1; // Checking wrong hash here?
+                var tentativeScore = gScore[neighbourState.SourceHash] + 1;
                 if (gScore.ContainsKey(neighbourHash) && tentativeScore >= gScore[neighbourHash]) continue;
                 
-                cameFrom[neighbour] = current;
+                cameFrom[neighbourState] = current;
                 gScore[neighbourHash] = tentativeScore;
-                if (openSet.UnorderedItems.All(tuple => tuple.Element.DestinationHash != neighbourHash && !knownStates.ContainsKey(tuple.Element.DestinationHash)))
+                if (openSet.UnorderedItems.All(tuple => tuple.Element.DestinationHash != neighbourHash))
                 {
-                    openSet.Enqueue(neighbour, tentativeScore);
+                    openSet.Enqueue(neighbourState, tentativeScore);
                 }
             }
         }

@@ -397,16 +397,36 @@ public class GameActionTests
     }
 
     [Test]
-    public void FoundationsFull_PlayerIsVictorious()
+    public void MovePileToOtherPile_LastFaceDownCardFlipped_GameStateIsVictorious()
     {
         var cardToMove = Create.Clubs(13);
 
-        var sourcePile = Create.Pile(cardToMove);
+        var sourcePile = Create.Pile(1, cardToMove);
+        var emptyTargetPile = Create.Pile();
 
         var gameState = GameAction.Init() with
         {
+            Piles = new [] { sourcePile, emptyTargetPile },
+            FaceDownCards = Create.List(Create.Diamonds(13))
+        };
+
+        var newGameState = gameState.MovePileToOtherPile(sourcePile, emptyTargetPile);
+
+        newGameState.Victorious.Should().BeTrue();
+    }
+    
+    [Test]
+    public void MoveCardFromPileToFoundation_LastFaceDownCardFlipped_GameStateIsVictorious()
+    {
+        var cardToMove = Create.Clubs(13);
+
+        var sourcePile = Create.Pile(1, cardToMove);
+
+        var gameState = GameAction.Init() with
+        {
+            Foundations = Create.Foundations(clubs: 12, diamonds: 12),
             Piles = new [] { sourcePile },
-            Foundations = Create.Foundations(13, 13, 12, 13)
+            FaceDownCards = Create.List(Create.Diamonds(13))
         };
 
         var newGameState = gameState.MoveCardFromPileToFoundation(sourcePile);

@@ -12,7 +12,7 @@ foreach (var i in Enumerable.Range(0, totalGames))
 {
     var gameState = GameAction.Init();
 
-    var player = new KlondikePlayer();
+    var player = new ExhaustiveKlondikePlayer();
 
     var result = player.TryToWin(gameState);
 

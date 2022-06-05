@@ -28,7 +28,7 @@ public static class PileExtensions
             return false;
         }
 
-        cardToPop = pile.FaceUp[0];
+        cardToPop = pile.TopCard();
         newPile = pile with
         {
             FaceUp = pile.FaceUp.Skip(1).ToList()
@@ -83,13 +83,18 @@ public static class PileExtensions
         {
             return cardToAccomodate.Value == 13;
         }
-        
-        var topCard = pile.FaceUp[0];
+
+        var topCard = pile.TopCard();
         
         return 
             topCard.Value == cardToAccomodate.Value + 1 
             && 
             topCard.Suit.OppositeColor(cardToAccomodate.Suit);
+    }
+
+    private static Card TopCard(this Pile pile)
+    {
+        return pile.FaceUp[0];
     }
 
     private static bool OppositeColor(this Suit suit, Suit other)

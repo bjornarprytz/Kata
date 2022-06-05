@@ -47,18 +47,7 @@ public static class GameAction
 
     public static GameState PopStock(this GameState gameState)
     {
-        if (gameState.Stock.Cards.Any())
-        {
-            var remainingDiscard = gameState.Stock.Cards.Take(1).Concat(gameState.Discard.Cards);
-            var remainingStockCards = gameState.Stock.Cards.Skip(1);
-
-            return gameState with
-            {
-                Discard = new Discard(remainingDiscard.ToList()),
-                Stock = new Stock(remainingStockCards.ToList())
-            };
-        }
-        else
+        if (!gameState.Stock.Cards.Any())
         {
             return gameState with
             {
@@ -66,6 +55,15 @@ public static class GameAction
                 Stock = new Stock(gameState.Discard.Cards)
             };
         }
+        
+        var remainingDiscard = gameState.Stock.Cards.Take(1).Concat(gameState.Discard.Cards);
+        var remainingStockCards = gameState.Stock.Cards.Skip(1);
+
+        return gameState with
+        {
+            Discard = new Discard(remainingDiscard.ToList()),
+            Stock = new Stock(remainingStockCards.ToList())
+        };
     }
 
     public static GameState MoveCardFromDiscardToFoundation(this GameState gameState)
@@ -158,7 +156,7 @@ public static class GameAction
 
         if (source.TryMoveTo(target, out var newSourcePile, out var newTargetPile))
         {
-            return CheckEmptyPiles(
+            return CheckForVictory(CheckEmptyPiles(
                 gameState with
                 {
                     Piles = new List<Pile>(gameState.Piles)
@@ -166,7 +164,7 @@ public static class GameAction
                         [sourcePileIndex] = newSourcePile,
                         [targetPileIndex] = newTargetPile
                     }
-                });
+                }));
         }
 
         return gameState;

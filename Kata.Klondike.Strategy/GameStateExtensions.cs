@@ -8,12 +8,14 @@ namespace Kata.Klondike.Strategy;
 
 public static class GameStateExtensions
 {
+    private static readonly Card.Comparer CardComparer = new();
+    
     public static IEnumerable<StateTransition> Neighbours(this GameState gameState, ref Dictionary<string, GameState> knownGameStates) => gameState.GetPossibleTransitions(ref knownGameStates);
     
     public static string ComputeHash(this GameState gameState)
     {
         var json = JsonConvert.SerializeObject(gameState with { FaceDownCards = ArraySegment<Card>.Empty });
-
+        
         using var sha = SHA256.Create();
         
         return Encoding.ASCII.GetString(sha.ComputeHash(Encoding.UTF8.GetBytes(json)));
@@ -21,7 +23,7 @@ public static class GameStateExtensions
 
     public static string ComputeStageHash(this GameState gameState)
     {
-        var json = JsonConvert.SerializeObject(gameState.FaceDownCards.OrderBy(card => card, new Card.Comparer()));
+        var json = JsonConvert.SerializeObject(gameState.FaceDownCards.OrderBy(card => card, CardComparer));
 
         using var sha = SHA256.Create();
         
